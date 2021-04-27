@@ -8,6 +8,7 @@ export class AppService {
 
   emitMessageToSocketServer(eventObject: any) {
     console.log(' event obkect ', eventObject)
+    // todo: change to emmit dedicated user message
     this.eventGateway.wss.emit(eventObject.event, eventObject.data.message);
   }
 
