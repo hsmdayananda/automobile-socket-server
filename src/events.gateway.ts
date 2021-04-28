@@ -10,9 +10,6 @@ import { Server } from 'socket.io';
 
 @WebSocketGateway(4002, { transport: ['websocket'] })
 export class EventsGateway implements OnGatewayConnection {
-  // handleDisconnect(client: any) {
-  //   this.logger.log('Server disconnected');
-  // }
   private logger = new Logger('AppGateway');
   handleConnection(client: any) {
     this.logger.log("Client Connected");
